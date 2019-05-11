@@ -1,0 +1,25 @@
+<div class="ladytop" style="background-color: black">
+            <div class="nav">
+                <div class="left"><a href=""><img src="__PUBLIC__/images/logo.png" alt="文献管理网"></a></div>
+                <div class="right">
+                    <div class="box" style="padding-left: 60px">
+                    <a href="{:url('index/index')}">首页</a>
+                        <a href="{:url('index/showJournal')}" >期刊</a>
+                        <a href="{:url('index/showMonograph')}" >专著</a>
+                        <a href="{:url('index/showThesis')}" >学位论文</a>
+                        <a href="{:url('index/showPatent')}" >专利</a>
+                        <a href="{:url('index/showStandard')}" >标准</a>
+                        <a href="{:url('index/showNewspaper')}" >报纸</a>
+                        <a href="{:url('index/showpaper')}" >报纸</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="hotmenu">
+	<div class="con">友情连接：
+    {volist name="linkList" id="vo"}
+    <a href='{$vo.url}' target="_blank">{$vo.title}</a>
+    {/volist}
+    </div>
+</div>

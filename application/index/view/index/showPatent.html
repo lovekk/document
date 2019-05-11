@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>专利列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link href="__PUBLIC__/style/lady.css" type="text/css" rel="stylesheet"/>
+	<script type='text/javascript' src='__PUBLIC__/style/ismobile.js'></script>
+</head>
+
+<body>
+{include file="common/header" /}
+
+<!--顶部通栏-->
+<div class="overall">
+	<div class="left">
+		<div class="xnews2" style="float: left;width: 800px;height: 50px;margin-top: 40px">
+			<form role="form" action="" enctype="multipart/form-data" method="post">
+		    <span>
+			<input type="text" id="search" name="search"
+				   style="width: 400px;height:40px;border-radius: 5px;font-size: 18px" placeholder="请输入专利检索关键词">
+            </span>
+				<select name="menu" style="width: 100px;height:40px;border-radius: 5px;font-size: 16px">
+					<option value="title">专利名称</option>
+					<option value="author_ch">申请人</option>
+					<option value="type">专利类型</option>
+					<option value="datetime">申请日期</option>
+					<option value="country">国别</option>
+					<option value="number">专利号</option>
+					<option value="abstract">摘要</option>
+					<option value="content">全文内容</option>
+				</select>
+				<button type="submit" class="btn btn-default"
+						style="width: 100px;height:40px;border-radius: 5px;font-size: 18px">检索
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="position"></div>
+<div class="overall">
+	<div class="left">
+		{volist name="patentList" id="vo"}
+		<div class="xnews2">
+			<div class="dec">
+				<a style="font-size: 20px" target="_blank" href="{:url('index/showPatent',array('id'=>$vo['id']))}">{$vo.title}</a>&nbsp;&nbsp;&nbsp;点击量：{$vo.cnum}
+				<br>
+				<span class="writor">
+                    发明人：{$vo.author_ch}|{$vo.author_en}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    申请日期：{$vo.datetime} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    专利号：{$vo.number}<br>
+
+					<a style="font-size: 20px" target="_blank" href="{:url('index/outwordD',array('id'=>$vo['id'],'qufen'=>4))}"><input type="button" value="下载" ></a>
+					&nbsp;&nbsp;&nbsp;下载量：{$vo.dnum}
+                </span>
+			</div>
+		</div>
+		{/volist}
+		<div class="pages">
+			<div class="plist">
+				{$patentList->render()}
+			</div>
+		</div>
+	</div>
+
+
+	{include file="common/right" /}
+
+</div>
+
+
+{include file="common/foot" /}
+
+</body>
+</html>

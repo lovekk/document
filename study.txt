@@ -1,0 +1,17 @@
+1.安装composer
+    Composer 是 PHP5.3以上 的一个依赖管理工具。
+    它允许你声明项目所依赖的代码库，它会在你的项目中为你安装他们。
+    Composer 不是一个包管理器。
+    它涉及 "packages" 和 "libraries"，但它在每个项目的基础上进行管理，在你项目的某个目录中（例如 vendor）进行安装。
+    默认情况下它不会在全局安装任何东西。因此，这仅仅是一个依赖管理。
+
+    ①官网下载window版本的composer 安装
+    ②通过cmd命令提示符使用
+    ③输入 composer 验证安装成功
+    ④进入项目根目录www文件下,把文件下载到www下
+         d:
+         cd wamp\www
+         composer create-project topthink/think tp5   --prefer-dist
+         composer create-project topthink/think tp5
+         //在composer下面 创建一个项目 是最新的thinkphp 项目取名为tp5
+

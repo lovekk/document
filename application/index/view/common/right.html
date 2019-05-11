@@ -1,0 +1,50 @@
+<div class="right">
+    <!--右侧各种广告-->
+    <!--猜你喜欢-->
+    <div>
+        <div style="display: block; margin: 0px; padding: 0px; float: none; clear: none; overflow: hidden; position: relative; border: 0px none; background: transparent none repeat scroll 0% 0%; max-width: none; max-height: none; border-radius: 0px; box-shadow: none; transition: none 0s ease 0s ; text-align: left; box-sizing: content-box; width: 300px;">
+            <div class="hm-t-container" style="width: 298px;">
+                <div class="hm-t-main">
+                    <div class="hm-t-header">最新期刊</div>
+                    <div class="hm-t-body">
+                        <ul class="hm-t-list hm-t-list-img">
+                            {volist name="clickres" id="vo"}
+                            <li class="hm-t-item hm-t-item-img">
+                                <a data-pos="3" title="{$vo.title}" target="_blank"
+                                   href="{:url('index/showJournal',array('id'=>$vo['id']))}" class="hm-t-img-title"
+                                   style="visibility: visible;"><span>{$vo.title}</span></a>
+                            </li>
+                            {/volist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="height:15px"></div>
+    <div id="hm_t_57953">
+        <div style="display: block; margin: 0px; padding: 0px; float: none; clear: none; overflow: hidden; position: relative; border: 0px none; background: transparent none repeat scroll 0% 0%; max-width: none; max-height: none; border-radius: 0px; box-shadow: none; transition: none 0s ease 0s ; text-align: left; box-sizing: content-box; width: 300px;">
+            <div style="width: 298px;" class="hm-t-container">
+                <div class="hm-t-main">
+                    <div class="hm-t-header">报纸阅读</div>
+                    <div class="hm-t-body">
+                        <ul class="hm-t-list hm-t-list-img">
+                            {volist name="tjres" id="vo"}
+                            <li class="hm-t-item hm-t-item-img" style="border-radius: 2px"><a data-pos="3" title="{$vo.title}" target="_blank"
+                                href="{:url('index/showNewspaper',array('id'=>$vo['id']))}" class="hm-t-img-title"
+                                style="visibility: visible;"><span>{$vo.title}</span></a>
+                            </li>
+                            {/volist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="height:15px"></div>
+
+
+
+</div>

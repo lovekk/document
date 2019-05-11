@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>专利-全文</title>
+    <link href="__PUBLIC__/style/lady.css" type="text/css" rel="stylesheet"/>
+    <script type='text/javascript' src='__PUBLIC__/style/ismobile.js'></script>
+</head>
+
+<body>
+{include file="common/header" /}
+<!--顶部通栏-->
+<div class="position"><a href='{:url(' index/index')}'>主页</a> </div>
+
+<div class="overall">
+    <div class="left">
+        <!--头部-->
+        <div class="scrap">
+            <h1>{$onePatent.title}</h1>
+            <div class="spread">
+                <span class="writor">申请日期：{$onePatent.datetime}</span>
+                <span class="writor">申请人：{$onePatent.author_ch} | {$onePatent.author_en}</span>
+                <span class="writor">国别：{$onePatent.country}</span><br><br>
+
+                <span class="writor">专利类型：{$onePatent.type}</span>
+                <span class="writor">关键词：{$onePatent.con_key}</span>
+                <span class="writor">专利号：{$onePatent.number}</span>
+            </div>
+        </div>
+        <br>
+        <!--摘要-->
+        <div class="takeaway">
+            <span class="btn arr-left"></span>
+            <p class="jjxq">摘要：{$onePatent.abstract}</p>
+            <span class="btn arr-right"></span>
+        </div>
+        <!--内容-->
+        <div class="substance">
+            {$onePatent.content}
+        </div>
+
+    </div>
+    {include file="common/right" /}
+</div>
+{include file="common/foot" /}
+
+</body>
+</html>
