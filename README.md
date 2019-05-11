@@ -3,14 +3,14 @@
 
 这是之前帮同学做的毕业设计，拿来复习一下PHP语法和TP5的使用。
 
-## 一、开发环境
-开发工具：Sublime、PhpStorm
-开发环境：wamp/phpstudy
-数据库：mysql
-数据库工具：navicat
-开发语言：php5.6
-框架：ThinkPHP5.0
-后台模板：BeyondAdmin
+## 一、开发环境  
+开发工具：Sublime、PhpStorm  
+开发环境：wamp/phpstudy  
+数据库：mysql  
+数据库工具：navicat  
+开发语言：php5.6  
+框架：ThinkPHP5.0  
+后台模板：BeyondAdmin  
  
   
 ### 二、系统功能模块设计
